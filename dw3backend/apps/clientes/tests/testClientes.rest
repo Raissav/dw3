@@ -1,0 +1,54 @@
+### teste de buscar todos os clientes
+GET http://localhost:40000/GetAllClientes HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzQ3ODI5NzksInVzZXJuYW1lIjoicXdlIn0.SlYYCm8J6wlpb3i1jJcSvhSz6VjwKvzPOxza8P6-hzo
+
+{    
+    
+}
+
+### teste de buscar clientes por ID
+POST http://localhost:40000/GetClienteByID HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzQ3ODI5NzksInVzZXJuYW1lIjoicXdlIn0.SlYYCm8J6wlpb3i1jJcSvhSz6VjwKvzPOxza8P6-hzo
+
+{    
+    "clienteid": 4
+}
+
+### teste de inserção de clientes
+POST http://localhost:40000/InsertClientes HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzM0ODE2NDEsInVzZXJuYW1lIjoicXdlIn0.LRKs8uvt-SJ9E9dMGYRkCs7HhMDlqVmwap_zcaoONeQ
+
+{    
+    "clienteid": 0,
+    "codigo": "xpr",
+    "nome": "Pietro Paz Landin Borges",
+    "endereco": "Meu coração",
+    "ativo": true,
+    "deleted": false    
+}
+
+### teste de atualização de clientes
+POST http://localhost:40000/UpdateClientes HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzM0ODE2NDEsInVzZXJuYW1lIjoicXdlIn0.LRKs8uvt-SJ9E9dMGYRkCs7HhMDlqVmwap_zcaoONeQ
+
+{    
+    "clienteid": 9,
+    "codigo": "xfo",
+    "nome": "Raíssa Vaz Viriato",
+    "endereco": "Coração do Pietro",
+    "ativo": true,
+    "deleted": false 
+}
+
+### teste de atualização de clientes
+POST http://localhost:40000/DeleteClientes HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzM0ODE2NDEsInVzZXJuYW1lIjoicXdlIn0.LRKs8uvt-SJ9E9dMGYRkCs7HhMDlqVmwap_zcaoONeQ
+
+{    
+    "clienteid": 9   
+}
